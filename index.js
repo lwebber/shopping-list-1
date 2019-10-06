@@ -32,6 +32,7 @@ function runshop() {
 
     //these buttons need event delegation - target the parent element that existed
     //when DOM first created and use 'on' click w/specific target
+    //NOTE: can't use 'this' with arrow functions
 
     //'check' button event handler
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
