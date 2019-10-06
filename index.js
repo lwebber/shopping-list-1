@@ -1,9 +1,9 @@
 function runshop() {
 
     //'add item' button event handler
-    $('input[type="submit"]').submit((event) => {
+    $('.js-shopping-list-form').on('submit', (event) => {
         event.preventDefault();
-        let item = $(this).val();
+        let item = $(event.currentTarget).find('input[name="text"]').val();
 
         //add item to list
         $('.shopping-list').append(
@@ -32,7 +32,7 @@ function runshop() {
 
     //'delete' button event handler
     $('.shopping-item-delete').on('click', (event) => {
-
+        $(event.currentTarget).parent().siblings('li').remove();
     });
 
 
