@@ -1,26 +1,29 @@
 function runshop() {
 
     //'add item' button event handler
-    $('.js-shopping-list-form').on('submit', (event) => {
-        let item = $('#shopping-list-entry').val();
-
-        //add item to list
-        $('.shopping-list').append(
-            `<li>
-            <span class="shopping-item">${item}</span>
-            <div class="shopping-item-controls">
-                <button class="shopping-item-toggle">
-        <span class="button-label">check</span>
-      </button>
-                <button class="shopping-item-delete">
-        <span class="button-label">delete</span>
-      </button>
-            </div>
-        </li>`
-        );
+    $('#js-shopping-list-form').submit((event) => {
 
         event.preventDefault();
 
+        let input = $('#shopping-list-entry').val();
+
+        let item =
+            `<li>
+            <span class="shopping-item">${input}</span>
+            <div class="shopping-item-controls">
+                <button class="shopping-item-toggle">
+                    <span class="button-label">check</span>
+                </button>
+                <button class="shopping-item-delete">
+                 <span class="button-label">delete</span>
+                </button>
+            </div>
+            </li>`;
+
+        //add item to list
+        $('.shopping-list').append(item);
+
+        $('#shopping-list-entry').val('');
     });
 
 
