@@ -24,15 +24,14 @@ function runshop() {
 
 
     //'check' button event handler
-    $('.').on('click', () => {
-
+    $('.shopping-item-toggle').on('click', (event) => {
 
 
     });
 
     //'delete' button event handler
     $('.shopping-item-delete').on('click', (event) => {
-        $(event.currentTarget).parent().siblings('li').remove();
+        $(event.currentTarget).parent().parent().remove();
     });
 
 
