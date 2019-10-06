@@ -26,8 +26,7 @@ function runshop() {
 
     //'check' button event handler
     $('.shopping-item-toggle').on('click', (event) => {
-
-
+        $(event.currentTarget).parent().siblings('.shopping-item').toggleClass("shopping-item__checked");
     });
 
     //'delete' button event handler
