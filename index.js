@@ -27,13 +27,16 @@ function runshop() {
     });
 
 
+    //these buttons need event delegation - they aren't working on new
+    //items added to the DOM
+
     //'check' button event handler
-    $('.shopping-item-toggle').on('click', function(event) {
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         $(this).parent().siblings('.shopping-item').toggleClass("shopping-item__checked");
     });
 
     //'delete' button event handler
-    $('.shopping-item-delete').on('click', function(event) {
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
         $(this).parent().parent().remove();
     });
 
