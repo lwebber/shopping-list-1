@@ -26,6 +26,7 @@ function runshop() {
         //add item to list
         $('.shopping-list').append(item);
 
+        //clear text input field
         $('#shopping-list-entry').val('');
     });
 
