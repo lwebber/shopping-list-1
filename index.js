@@ -2,8 +2,7 @@ function runshop() {
 
     //'add item' button event handler
     $('.js-shopping-list-form').on('submit', (event) => {
-        event.preventDefault();
-        let item = $(event.currentTarget).find('input[name="text"]').val();
+        let item = $('#shopping-list-entry').val();
 
         //add item to list
         $('.shopping-list').append(
@@ -19,6 +18,8 @@ function runshop() {
             </div>
         </li>`
         );
+
+        event.preventDefault();
 
     });
 
