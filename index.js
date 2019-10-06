@@ -28,13 +28,13 @@ function runshop() {
 
 
     //'check' button event handler
-    $('.shopping-item-toggle').on('click', (event) => {
-        $(event.currentTarget).parent().siblings('.shopping-item').toggleClass("shopping-item__checked");
+    $('.shopping-item-toggle').on('click', function(event) {
+        $(this).parent().siblings('.shopping-item').toggleClass("shopping-item__checked");
     });
 
     //'delete' button event handler
-    $('.shopping-item-delete').on('click', (event) => {
-        $(event.currentTarget).parent().parent().remove();
+    $('.shopping-item-delete').on('click', function(event) {
+        $(this).parent().parent().remove();
     });
 
 
