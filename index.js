@@ -44,10 +44,6 @@ function runshop() {
     $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
         $(this).parent().parent().remove();
     });
-
-
-
-
 }
 
 $(runshop);
